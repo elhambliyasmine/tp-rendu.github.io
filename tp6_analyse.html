@@ -76,7 +76,7 @@
 <body>
 
     <!-- NAVBAR GLOBALE -->
-  <nav class="main-navbar">
+    <nav class="main-navbar">
         <div class="hamburger-btn" id="hamburgerBtn">
             <span></span>
             <span></span>
@@ -180,8 +180,8 @@
 
         <section class="analyse-section">
             <h2>Objectifs du TP 6</h2>
-            <p>Ce TP est consacré aux **animations pour le web**, d’abord avec les transitions et animations CSS, puis avec des effets contrôlés en JavaScript à l’aide de fonctions comme <code>setInterval</code> et des écouteurs d’événements. [file:117]</p>
-            <p>L’idée est d’apprendre à donner du mouvement à l’interface tout en gardant un code structuré entre HTML, CSS et JS, et en utilisant des propriétés comme <code>transform</code>, <code>transition</code> et <code>@keyframes</code>. [file:117]</p>
+            <p>Ce TP est consacré aux <strong>animations pour le web</strong>, d’abord avec les transitions et animations CSS, puis avec des effets contrôlés en JavaScript à l’aide de fonctions comme <code>setInterval</code> et des écouteurs d’événements.</p>
+            <p>L’idée est d’apprendre à donner du mouvement à l’interface tout en gardant un code structuré entre HTML, CSS et JS, et en utilisant des propriétés comme <code>transform</code>, <code>transition</code> et <code>@keyframes</code>.</p>
         </section>
 
         <section class="analyse-section">
@@ -189,20 +189,20 @@
 
             <div class="exercise-card">
                 <h3>Principe de l’effet</h3>
-                <p>L’exercice 1 consiste à créer un effet de **rideau au survol** sur une image : l’image est d’abord masquée par un calque, puis ce calque se rétracte en douceur quand on passe la souris dessus. [file:117]</p>
-                <p>Dans la page, la structure est simple : un conteneur qui englobe l’image et un bloc de type rideau au-dessus, le tout stylé avec une transition CSS sur une transformation de type translation ou largeur. [file:117]</p>
+                <p>L’exercice 1 consiste à créer un effet de <strong>rideau au survol</strong> sur une image : l’image est d’abord masquée par un calque, puis ce calque se rétracte en douceur quand on passe la souris dessus.</p>
+                <p>Dans la page, la structure est simple : un conteneur qui englobe l’image et un bloc de type rideau au-dessus, le tout stylé avec une transition CSS sur une transformation de type translation ou largeur.</p>
             </div>
 
             <div class="exercise-card">
                 <h3>Techniques utilisées</h3>
-                <p>L’effet repose sur une transition définie avec la propriété <code>transition</code> pour animer la propriété <code>transform</code> du rideau entre son état fermé et ouvert, avec une durée et une fonction de timing adaptées. [file:117]</p>
-                <p>Le survol se déclenche en CSS avec le pseudo‑sélecteur <code>:hover</code> appliqué au conteneur, ce qui permet d’animer le rideau sans JavaScript, uniquement en jouant sur <code>transform: translateX()</code> ou <code>scaleX()</code>. [file:117]</p>
+                <p>L’effet repose sur une transition définie avec la propriété <code>transition</code> pour animer la propriété <code>transform</code> du rideau entre son état fermé et ouvert, avec une durée et une fonction de timing adaptées.</p>
+                <p>Le survol se déclenche en CSS avec le pseudo‑sélecteur <code>:hover</code> appliqué au conteneur, ce qui permet d’animer le rideau sans JavaScript, uniquement en jouant sur <code>transform: translateX()</code> ou <code>scaleX()</code>.</p>
             </div>
 
             <div class="exercise-card">
                 <h3>Apprentissages</h3>
-                <p>Cet exercice m’a aidée à mieux comprendre comment préparer l’HTML pour une animation : positionner correctement les éléments (image en fond, rideau par dessus) et choisir le bon point d’origine avec <code>transform-origin</code> si nécessaire. [file:117]</p>
-                <p>Il montre aussi comment une simple transition bien réglée peut suffire à créer un effet visuel propre et interactif, sans avoir besoin d’écrire du code JavaScript supplémentaire. [file:117]</p>
+                <p>Cet exercice m’a aidée à mieux comprendre comment préparer l’HTML pour une animation : positionner correctement les éléments (image en fond, rideau par dessus) et choisir le bon point d’origine avec <code>transform-origin</code> si nécessaire.</p>
+                <p>Il montre aussi comment une simple transition bien réglée peut suffire à créer un effet visuel propre et interactif, sans avoir besoin d’écrire du code JavaScript supplémentaire.</p>
             </div>
         </section>
 
@@ -211,27 +211,27 @@
 
             <div class="exercise-card">
                 <h3>Objectif de la bannière</h3>
-                <p>L’exercice 5 demande de réaliser une **bannière animée** type promotion ou “portes ouvertes”, avec un logo, un texte accrocheur et un bouton d’appel à l’action au centre de la page. [file:117]</p>
-                <p>Le but est d’utiliser les animations CSS pour faire apparaître ou bouger les éléments de la bannière, mais aussi d’ajouter des interactions JavaScript comme l’ajout de tâches ou le changement de thème pour s’entraîner aux événements. [file:117]</p>
+                <p>L’exercice 5 demande de réaliser une <strong>bannière animée</strong> type promotion ou “portes ouvertes”, avec un logo, un texte accrocheur et un bouton d’appel à l’action au centre de la page.</p>
+                <p>Le but est d’utiliser les animations CSS pour faire apparaître ou bouger les éléments de la bannière, mais aussi d’ajouter des interactions JavaScript comme l’ajout de tâches ou le changement de thème pour s’entraîner aux événements.</p>
             </div>
 
             <div class="exercise-card">
                 <h3>Animations CSS</h3>
-                <p>Pour la bannière, les propriétés <code>@keyframes</code> et <code>animation</code> permettent de faire bouger le logo, faire apparaître le texte progressivement ou donner un léger rebond au bouton <code>S'inscrire</code>, en jouant sur <code>transform</code> et l’opacité. [file:117]</p>
-                <p>Les paramètres comme la durée, la fonction d’accélération <code>ease-in-out</code> et le nombre de répétitions (<code>animation-iteration-count</code>) servent à rendre l’animation agréable sans la rendre trop agressive. [file:117]</p>
+                <p>Pour la bannière, les propriétés <code>@keyframes</code> et <code>animation</code> permettent de faire bouger le logo, faire apparaître le texte progressivement ou donner un léger rebond au bouton <code>S'inscrire</code>, en jouant sur <code>transform</code> et l’opacité.</p>
+                <p>Les paramètres comme la durée, la fonction d’accélération <code>ease-in-out</code> et le nombre de répétitions (<code>animation-iteration-count</code>) servent à rendre l’animation agréable sans la rendre trop agressive.</p>
             </div>
 
             <div class="exercise-card">
                 <h3>Interactions JavaScript</h3>
-                <p>Le TP introduit aussi des petites fonctionnalités interactives en JavaScript, par exemple un système de liste de tâches où l’on ajoute des éléments en cliquant sur un bouton, ou un bouton de changement de thème clair/sombre. [file:117]</p>
-                <p>Ces scripts utilisent des événements comme <code>click</code>, la création dynamique d’éléments avec <code>document.createElement</code> et la manipulation de classes comme <code>dark-mode</code> pour modifier l’apparence globale de la page. [file:117]</p>
+                <p>Le TP introduit aussi des petites fonctionnalités interactives en JavaScript, par exemple un système de liste de tâches où l’on ajoute des éléments en cliquant sur un bouton, ou un bouton de changement de thème clair/sombre.</p>
+                <p>Ces scripts utilisent des événements comme <code>click</code>, la création dynamique d’éléments avec <code>document.createElement</code> et la manipulation de classes comme <code>dark-mode</code> pour modifier l’apparence globale de la page.</p>
             </div>
         </section>
 
         <section class="analyse-section">
             <h2>Bilan personnel</h2>
-            <p>Ce TP m’a permis de relier les **bases des animations CSS** (transitions, transformations, keyframes) à des cas concrets : un effet de survol visuel et une bannière complète avec mise en scène du contenu. [file:117]</p>
-            <p>En parallèle, les petits scripts JavaScript m’ont montré comment ajouter une vraie logique interactive autour de ces animations, en réagissant aux actions de l’utilisateur plutôt qu’en lançant seulement des effets décoratifs. [file:117]</p>
+            <p>Ce TP m’a permis de relier les <strong>bases des animations CSS</strong> (transitions, transformations, keyframes) à des cas concrets : un effet de survol visuel et une bannière complète avec mise en scène du contenu.</p>
+            <p>En parallèle, les petits scripts JavaScript m’ont montré comment ajouter une vraie logique interactive autour de ces animations, en réagissant aux actions de l’utilisateur plutôt qu’en lançant seulement des effets décoratifs.</p>
         </section>
 
     </main>

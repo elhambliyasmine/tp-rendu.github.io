@@ -1,0 +1,35 @@
+/* On ne touche pas au header, juste à la zone de l'exercice */
+body {
+    margin: 0;
+    background-color: pink;
+}
+
+/* Conteneur pour centrer le rectangle sous le header */
+.exercice-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px); /* 60px ≈ hauteur de la navbar */
+}
+
+/* Rectangle de base */
+.rectangle {
+    width: 300px;
+    height: 200px;
+    background-color: #ff0000;
+    border-radius: 15%;
+}
+
+/* < 960px : deuxième couleur */
+@media (max-width: 960px) {
+    .rectangle {
+        background-color: rgb(172, 40, 62);
+    }
+}
+
+/* < 480px : troisième couleur */
+@media (max-width: 480px) {
+    .rectangle {
+        background-color: rgb(33, 120, 170);
+    }
+}

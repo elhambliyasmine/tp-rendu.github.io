@@ -6,26 +6,77 @@
     <title>TP 8 – Canvas & sprites animés</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
+        .analyse-header {
+            background: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+        .analyse-header h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .analyse-header .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+        }
         .analyse-content {
             max-width: 900px;
-            margin: 40px auto;      /* marge en haut + centré */
-            padding: 0 20px;        /* marge intérieure gauche/droite */
+            margin: 40px auto;
+            padding: 0 20px;
         }
-
         .analyse-section {
-            margin-bottom: 30px;    /* espace entre les blocs */
+            background: #ffffff;
+            padding: 25px 20px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
         }
-
-        .analyse-section p,
+        .analyse-section h2 {
+            margin-bottom: 15px;
+            color: #4b6786;
+            font-size: 1.4rem;
+        }
+        .analyse-section p {
+            margin-bottom: 10px;
+        }
+        .analyse-section ul {
+            padding-left: 20px;
+        }
         .analyse-section li {
-            margin-bottom: 10px;    /* espace entre les lignes de texte */
+            margin-bottom: 8px;
+        }
+        .exercise-card {
+            background: #f7f8fa;
+            border-left: 4px solid #4b6786;
+            padding: 15px 15px 10px 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+        .exercise-card h3 {
+            margin-bottom: 8px;
+            color: #4b6786;
+            font-size: 1.1rem;
+        }
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+        }
+        .back-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4b6786;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
 
     <!-- HEADER / MENU -->
-       <nav class="main-navbar">
+    <nav class="main-navbar">
         <div class="hamburger-btn" id="hamburgerBtn">
             <span></span>
             <span></span>
@@ -199,7 +250,7 @@
                 <li>Nettoyer et commenter davantage le code pour séparer clairement la gestion des entrées, la logique de jeu et l’affichage.</li>
                 <li>Ajouter des éléments d’interface sur le canvas (score, temps, vies, etc.).</li>
                 <li>Tester différentes vitesses d’animation et utiliser éventuellement un delta de temps pour rendre le jeu indépendant du nombre de FPS.</li>
-                <li>Expérimenter d’autres filtres d’image au-delà des niveaux de gris (teinte, saturation, contraste).</li>
+                <li>Expérimenter d’autres filtres d’image au‑delà des niveaux de gris (teinte, saturation, contraste).</li>
             </ul>
         </section>
 
@@ -242,6 +293,4 @@
     </script>
 
 </body>
-	 <a href="index.html" class="retour-accueil">← Retour à la liste des TP</a>
-
 </html>

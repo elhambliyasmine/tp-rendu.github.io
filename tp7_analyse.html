@@ -180,8 +180,8 @@
 
         <section class="analyse-section">
             <h2>Objectifs du TP</h2>
-            <p>Ce TP introduit le **Canvas HTML5** : dessin de formes, tracé de segments et mise à jour du contenu par JavaScript plutôt que par CSS ou HTML classique. [file:118]</p>
-            <p>Les exercices demandent de reproduire des figures précises, puis de les rendre interactives via des boutons et des événements, ce qui rapproche du fonctionnement de petits outils graphiques. [file:118]</p>
+            <p>Ce TP introduit le <strong>Canvas HTML5</strong> : dessin de formes, tracé de segments et mise à jour du contenu par JavaScript plutôt que par CSS ou HTML classique.</p>
+            <p>Les exercices demandent de reproduire des figures précises, puis de les rendre interactives via des boutons et des événements, ce qui rapproche du fonctionnement de petits outils graphiques.</p>
         </section>
 
         <section class="analyse-section">
@@ -189,20 +189,20 @@
 
             <div class="exercise-card">
                 <h3>Figures demandées</h3>
-                <p>L’exercice 1 impose de coder plusieurs figures différentes sur canvas : cercles concentriques, dessin d’une poule sur une grille 10×10, un damier et un quadrillage courbe qui forme une sorte de lentille. [file:118]</p>
-                <p>Dans le code, chaque figure est dessinée dans une fonction séparée (par exemple <code>drawConcentricCircles</code>, <code>drawChicken</code>, <code>drawCheckerboard</code>, <code>drawCurvePattern</code>) qui utilise l’API 2D de Canvas. </p>
+                <p>L’exercice 1 impose de coder plusieurs figures différentes sur canvas : cercles concentriques, dessin d’une poule sur une grille 10×10, un damier et un quadrillage courbe qui forme une sorte de lentille.</p>
+                <p>Dans le code, chaque figure est dessinée dans une fonction séparée (par exemple <code>drawConcentricCircles</code>, <code>drawChicken</code>, <code>drawCheckerboard</code>, <code>drawCurvePattern</code>) qui utilise l’API 2D de Canvas.</p>
             </div>
 
             <div class="exercise-card">
                 <h3>Bouton “Figure suivante”</h3>
-                <p>Une fois les quatre dessins prêts, ils sont stockés dans un tableau et un bouton “Figure suivante” permet de passer de l’un à l’autre en boucle, en effaçant le canvas puis en appelant la fonction suivante. [file:118]</p>
-                <p>Cette partie montre comment structurer le code avec des fonctions réutilisables, gérer un index courant et manipuler le canvas avec <code>clearRect</code>, ce qui est très proche de la logique d’une petite application graphique. </p>
+                <p>Une fois les quatre dessins prêts, ils sont stockés dans un tableau et un bouton “Figure suivante” permet de passer de l’un à l’autre en boucle, en effaçant le canvas puis en appelant la fonction suivante.</p>
+                <p>Cette partie montre comment structurer le code avec des fonctions réutilisables, gérer un index courant et manipuler le canvas avec <code>clearRect</code>, ce qui est très proche de la logique d’une petite application graphique.</p>
             </div>
 
             <div class="exercise-card">
                 <h3>Ce que cela m’a appris</h3>
-                <p>Cet exercice m’a appris à transformer des consignes visuelles (grille, coordonnées, segments) en code en utilisant <code>moveTo</code>, <code>lineTo</code>, <code>arc</code> et des boucles pour générer des motifs répétitifs comme un damier ou un quadrillage. [file:118]</p>
-                <p>Il m’a aussi obligé à réfléchir aux systèmes de coordonnées en définissant une fonction de conversion “grille → pixels” pour dessiner la poule exactement au bon endroit sur le canevas. </p>
+                <p>Cet exercice m’a appris à transformer des consignes visuelles (grille, coordonnées, segments) en code en utilisant <code>moveTo</code>, <code>lineTo</code>, <code>arc</code> et des boucles pour générer des motifs répétitifs comme un damier ou un quadrillage.</p>
+                <p>Il m’a aussi obligé à réfléchir aux systèmes de coordonnées en définissant une fonction de conversion “grille → pixels” pour dessiner la poule exactement au bon endroit sur le canevas.</p>
             </div>
         </section>
 
@@ -211,27 +211,27 @@
 
             <div class="exercise-card">
                 <h3>Comportement attendu</h3>
-                <p>L’exercice 3 demande une page avec un canvas 300×300 contenant un rectangle plein initialement placé en (50,50) avec une taille 50×50, puis une série de boutons qui permettent de modifier ce rectangle. [file:118]</p>
-                <p>Les boutons changent successivement la largeur, la hauteur, la couleur, le style (plein ou contour) et la visibilité, ce qui oblige à redessiner le canevas à chaque interaction. [file:118]</p>
+                <p>L’exercice 3 demande une page avec un canvas 300×300 contenant un rectangle plein initialement placé en (50,50) avec une taille 50×50, puis une série de boutons qui permettent de modifier ce rectangle.</p>
+                <p>Les boutons changent successivement la largeur, la hauteur, la couleur, le style (plein ou contour) et la visibilité, ce qui oblige à redessiner le canevas à chaque interaction.</p>
             </div>
 
             <div class="exercise-card">
                 <h3>Logique JavaScript</h3>
-                <p>Le script conserve l’état du rectangle dans des variables (coordonnées, dimensions, tableau de couleurs, style et visibilité) et chaque bouton modifie ces valeurs avant d’appeler une fonction <code>draw()</code> qui efface le canvas et redessine le rectangle. [file:118]</p>
-                <p>Cette organisation montre comment séparer la logique (variables) de l’affichage (fonction de dessin) et comment utiliser des gestionnaires d’événements <code>onclick</code> pour créer une interface interactive simple autour du canvas. [file:118]</p>
+                <p>Le script conserve l’état du rectangle dans des variables (coordonnées, dimensions, tableau de couleurs, style et visibilité) et chaque bouton modifie ces valeurs avant d’appeler une fonction <code>draw()</code> qui efface le canvas et redessine le rectangle.</p>
+                <p>Cette organisation montre comment séparer la logique (variables) de l’affichage (fonction de dessin) et comment utiliser des gestionnaires d’événements <code>onclick</code> pour créer une interface interactive simple autour du canvas.</p>
             </div>
 
             <div class="exercise-card">
                 <h3>Apport de l’exercice</h3>
-                <p>Grâce à cet exercice, il devient plus clair que le canvas ne “garde” pas d’historique : à chaque changement, il faut effacer et redessiner toute la scène, ce qui est une façon différente de penser par rapport au DOM classique. [file:118]</p>
-                <p>Il donne aussi un aperçu de la manière dont on peut construire de petits outils graphiques ou des mini‑jeux en gérant à la fois l’état JavaScript et le rendu dans un même canevas. [file:118]</p>
+                <p>Grâce à cet exercice, il devient plus clair que le canvas ne “garde” pas d’historique : à chaque changement, il faut effacer et redessiner toute la scène, ce qui est une façon différente de penser par rapport au DOM classique.</p>
+                <p>Il donne aussi un aperçu de la manière dont on peut construire de petits outils graphiques ou des mini‑jeux en gérant à la fois l’état JavaScript et le rendu dans un même canevas.</p>
             </div>
         </section>
 
         <section class="analyse-section">
             <h2>Bilan sur Canvas</h2>
-            <p>Ce TP m’a fait passer d’un simple dessin statique sur canvas à des interfaces où l’utilisateur peut vraiment interagir avec les formes, les couleurs et les styles. [file:118]</p>
-            <p>Il pose les bases pour des projets plus avancés (animations, jeux, visualisations) en montrant comment structurer le code en fonctions, utiliser les boutons comme contrôles et manipuler précisément les coordonnées dans le canvas. [file:118]</p>
+            <p>Ce TP m’a fait passer d’un simple dessin statique sur canvas à des interfaces où l’utilisateur peut vraiment interagir avec les formes, les couleurs et les styles.</p>
+            <p>Il pose les bases pour des projets plus avancés (animations, jeux, visualisations) en montrant comment structurer le code en fonctions, utiliser les boutons comme contrôles et manipuler précisément les coordonnées dans le canvas.</p>
         </section>
 
     </main>
