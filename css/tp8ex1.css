@@ -1,0 +1,29 @@
+/* Reset de base */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: auto;           /* pas de 100vh ici */
+}
+
+body {
+    justify-content: center;   /* centre horizontalement */
+    align-items: center;       /* centre verticalement */
+    background-color: #ffffff; /* ou une autre couleur de fond */
+}
+
+#gameCanvas {
+    display: block;
+    border: 1px solid #000;    /* optionnel, juste pour voir le cadre */
+}
+
+
+/* Zone de l'exercice sous le header */
+.canvas-wrapper {
+    /* conteneur normal, SANS position fixe ni absolute sur le header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 60px); /* hauteur dispo sous la barre */
+    margin-top: 60px;               /* place pour la barre */
+    box-sizing: border-box;
+}

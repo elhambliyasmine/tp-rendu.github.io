@@ -1,0 +1,109 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+.page-exercice {
+    max-width: 1000px;
+    margin: auto;
+    border: 3px solid #c00030;
+    background-color: white;
+}
+
+/* En-têtes rouges */
+.entete-rouge {
+    background-color: #c00030;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.groupe-titre h1 { margin: 0; font-size: 22px; }
+.groupe-titre p { margin: 5px 0 0 0; opacity: 0.8; }
+
+/* Styles spécifiques Exercice 1 */
+.badge-code {
+    border: 1px solid white;
+    padding: 8px 15px;
+    margin: 5px;
+    font-family: 'Courier New', monospace;
+}
+.pointilles { border-style: dashed; }
+
+/* Tableau des propriétés */
+.tableau-flex {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tableau-flex th, .tableau-flex td {
+    border: 1px solid #c00030;
+    padding: 12px;
+    text-align: center;
+}
+
+.tableau-flex th { background-color: #c00030; color: white; }
+
+.labels-axes td {
+    background-color: #ffd6dc;
+    color: #c00030;
+    font-weight: bold;
+}
+
+.liste-proprietes { color: #00796b; font-size: 14px; line-height: 1.6; }
+.valeur-active { color: #c00030; font-weight: bold; }
+
+.cellule-flex-flow { background-color: #c00030; color: white; }
+
+/* Section Items du bas */
+.apercu-items { display: flex; gap: 15px; }
+.bloc-item {
+    background: white;
+    color: #c00030;
+    padding: 15px 25px;
+    border-radius: 4px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.proprietes-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    background-color: #eee;
+}
+
+.ligne-propriete { display: contents; }
+
+.etiquette, .valeur-chiffre, .raccourci-flex {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.etiquette { background-color: #c00030; color: white; font-weight: bold; }
+.valeur-chiffre { color: #c00030; font-weight: bold; background: white; }
+
+.raccourci-flex {
+    grid-column: 3;
+    grid-row: 1 / 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00796b;
+    font-size: 18px;
+    background: white;
+}
+
+/* Zone de compte-rendu */
+.zone-analyse {
+    padding: 20px;
+    background: #333;
+    color: white;
+    border-top: 3px solid #c00030;
+}
+
+    

@@ -1,0 +1,30 @@
+body, html,main {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Configuration du parallaxe  */
+.parallax {
+    background-attachment: fixed; /* L'image reste fixe */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh; /* Toute la hauteur de l'écran */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay h1 {
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    padding: 20px 40px;
+    letter-spacing: 5px;
+}
+
+.tutoriel {
+    padding: 80px 15%;
+    background-color: #4b6786;
+    line-height: 1.8;
+}

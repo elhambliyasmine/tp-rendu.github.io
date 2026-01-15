@@ -1,0 +1,32 @@
+/* tp8ex2.css */
+
+/* Reset simple */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+main{
+
+display: block;
+padding: auto;
+}
+/* On laisse style.css gérer la navbar en haut */
+body {
+    background-color: #000000;
+}
+
+/* Conteneur général sous le header */
+.page-content {
+    min-height: calc(100vh - 60px); /* tout l'espace dispo sous la barre */
+    margin-top: 60px;               /* laisse la place pour la barre */
+    display: flex;
+    justify-content: center;        /* centre horizontalement */
+    align-items: center;            /* centre verticalement */
+    box-sizing: border-box;
+}
+
+/* Canvas (ou autre contenu) */
+.page-content #gameCanvas {
+    display: block;
+}

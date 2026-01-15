@@ -1,0 +1,84 @@
+/* --- 1. CONFIGURATION BUREAU (Desktop) --- */
+.container {
+    display: grid;
+    gap: 10px;
+}
+
+header {
+    background-color: yellow;
+    border-radius: 10px;
+    border: solid 1px #CCCCCC;
+    padding: 10px;
+    text-align: center;
+}
+
+main {
+    display: grid;
+    gap: 10px;
+    /* On crée une grille de 3 colonnes */
+    grid-template-columns: repeat(3, 1fr);
+    /* On définit les zones pour placer les articles selon la maquette */
+    grid-template-areas: 
+        "art1 art2 art3"
+        "art4 art5 art6";
+}
+
+/* On lie chaque article du HTML à une zone précise */
+main article:nth-child(1) { grid-area: art1; } /* Quisque */
+main article:nth-child(2) { grid-area: art2; } /* Excepteur */
+main article:nth-child(3) { grid-area: art3; } /* Morbi */
+main article:nth-child(4) { grid-area: art4; } /* Ab illo */
+main article:nth-child(5) { grid-area: art5; } /* Vivamus */
+main article:nth-child(6) { grid-area: art6; } /* A communi */
+
+article {
+    background-color: cyan;
+    border-radius: 10px;
+    border: solid 1px #CCCCCC;
+    padding: 15px;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+footer div {
+    background-color: magenta;
+    border-radius: 10px;
+    border: solid 1px #CCCCCC;
+    padding: 15px;
+}
+
+/* --- 2. LARGEUR INFÉRIEURE À 960px (Tablette) --- */
+@media (max-width: 960px) {
+    main {
+        /* On passe à 2 colonnes et on réorganise les zones */
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "art1 art3"
+            "art2 art4"
+            "art5 art6";
+    }
+
+    footer {
+        grid-template-columns: 1fr; /* Le footer passe sur une colonne */
+    }
+}
+
+/* --- 3. LARGEUR INFÉRIEURE À 650px (Mobile) --- */
+@media (max-width: 650px) {
+    main {
+        /* Tout sur une seule colonne */
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "art1"
+            "art2"
+            "art3"
+            "art4"
+            "art5"
+            "art6";
+    }
+}

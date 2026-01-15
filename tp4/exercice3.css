@@ -1,0 +1,58 @@
+/* Style global du tableau  */
+table {
+    border-collapse: collapse; /* Bordures simples  */
+    width: 90%;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+}
+
+/* Le titre principal (caption)  */
+caption {
+    font-size: 1.8em;
+    padding: 10px;
+    background-color: #9ea5b3; /* Gris bleuté du header */
+    border: 1px solid black;
+    border-bottom: none;
+}
+
+/* Style des cellules  */
+th, td {
+    border: 1px solid black;
+    padding: 6px;
+    text-align: left;
+}
+
+/* Ligne d'en-tête (Titres des colonnes) */
+tr:first-child {
+    background-color: #333333; /* Fond noir */
+    color: white; /* Texte blanc */
+    text-align: center;
+}
+
+/* --- COLORATION PAR GROUPES (Pseudo-classes :nth-child)  --- */
+
+/* 1. Groupe Pseudo-éléments (Lignes 2 à 5) - Couleur Rouge/Rose */
+tr:nth-child(n+2):nth-child(-n+5) {
+    background-color: #e69999;
+}
+
+/* 2. Groupe Sélecteurs d'attribut (Lignes 6 à 12) - Couleur Verte */
+tr:nth-child(n+6):nth-child(-n+12) {
+    background-color: #99ff99;
+}
+
+/* 3. Groupe Pseudo-classes de structure (Lignes 13 à 23) - Couleur Cyan/Bleu clair */
+tr:nth-child(n+13):nth-child(-n+23) {
+    background-color: #b3ffff;
+}
+
+/* 4. Cas final E:empty (Ligne 24) - Couleur Bleue plus foncée */
+tr:nth-child(24) {
+    background-color: #99ccff;
+}
+
+/* Centrage des chiffres dans la dernière colonne */
+td:last-child {
+    text-align: center;
+    font-weight: bold;
+}

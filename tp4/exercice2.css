@@ -1,0 +1,81 @@
+/* Style général de la page */
+body {
+    background-color: #bcbcbc; /* Fond gris identique à la capture */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2.2em;
+    margin-bottom: 30px;
+}
+
+/* Liste de téléchargement */
+ul#telechargement {
+    list-style-type: none;
+    padding: 0;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+ul#telechargement li {
+    border-bottom: 2px solid #333; /* Ligne noire de séparation */
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    min-height: 60px;
+}
+
+/* --- 1. Style des liens et injection du nom du fichier --- */
+#telechargement a {
+    color: #800000; /* Couleur bordeaux demandée */
+    font-weight: bold;
+    text-decoration: underline;
+    margin-left: 100px; /* Espace pour l'icône de gauche */
+    display: flex;
+    align-items: center;
+}
+
+/* On utilise content: attr(href) pour afficher le texte du lien qui est vide dans le HTML */
+#telechargement a::before {
+    content: attr(href); 
+}
+
+/* --- 2. Icônes de format à GAUCHE (Sélecteurs de fin de chaîne $=) --- */
+/* On utilise un pseudo-élément sur le li pour placer l'icône de format */
+ul#telechargement li::before {
+    position: absolute;
+    left: 20px;
+    content: ""; /* Par défaut vide, sera rempli par les sélecteurs ci-dessous */
+    display: block;
+}
+
+#telechargement li:has(a[href$=".pdf"])::before { content: url('pdf.png'); }
+#telechargement li:has(a[href$=".doc"])::before { content: url('doc.png'); }
+#telechargement li:has(a[href$=".xls"])::before { content: url('xls.png'); }
+#telechargement li:has(a[href$=".png"])::before { content: url('png.png'); }
+#telechargement li:has(a[href$=".rtf"])::before { content: url('rtf.png'); }
+#telechargement li:has(a[href$=".zip"])::before { content: url('zip.png'); }
+#telechargement li:has(a[href$=".svg"])::before { content: url('svg.png'); }
+#telechargement li:has(a[href$=".ods"])::before { content: url('ods.png'); }
+#telechargement li:has(a[href$=".ppt"])::before { content: url('ppt.png'); }
+#telechargement li:has(a[href$=".pdf"])::before { content: url('pdf.png'); }
+/* --- 3. Drapeaux de langue à DROITE (Sélecteurs d'attribut précis) --- */
+/* Les drapeaux sont insérés après le nom du fichier, entre parenthèses */
+#telechargement a::after {
+    margin-left: 8px;
+    text-decoration: none; /* Pas de souligné sur le drapeau */
+    color: black; /* Parenthèses en noir */
+}
+
+#telechargement a[hreflang="fr"]::after {
+    content: " (" url('fr.jpg') ")";
+}
+
+#telechargement a[hreflang="en"]::after {
+    content: " (" url('en.jpg') ")";
+}
