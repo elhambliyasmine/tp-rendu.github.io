@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercice 3 - Canvas</title>
+  <link rel="stylesheet" href="css/tp7ex3.css">
+      <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+   <nav class="main-navbar">
+        <div class="hamburger-btn" id="hamburgerBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <a href="index.html" class="nav-logo">Yasmine EL HAMBLI</a>
+
+        <div class="side-menu" id="sideMenu">
+            <div class="close-btn" id="closeBtn">&times;</div>
+
+            <ul class="menu-list">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="#synthese-section">Synthèse</a></li>
+
+                <hr class="separator">
+
+                <li class="dropdown-item">
+                    <button class="dropdown-btn">TP 1 <span class="arrow">▼</span></button>
+                    <ul class="submenu">
+                        <li><a href="tp1ex1.html">Exercice 1</a></li>
+                        <li><a href="tp1ex2.html">Exercice 2</a></li>
+                        <li><a href="tp1_analyse.html">Analyse du TP</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown-item">
+                    <button class="dropdown-btn">TP 2 <span class="arrow">▼</span></button>
+                    <ul class="submenu">
+                        <li><a href="tp2ex1.html">Exercice 1</a></li>
+                        <li><a href="tp2ex2.html">Exercice 2</a></li>
+                        <li><a href="tp2_analyse.html">Analyse du TP</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown-item">
+                    <button class="dropdown-btn">TP 3 <span class="arrow">▼</span></button>
+                    <ul class="submenu">
+                        <li><a href="tp3ex1.html">Exercice 1</a></li>
+                        <li><a href="tp3ex2.html">Exercice 2</a></li>
+                        <li><a href="tp3_analyse.html">Analyse du TP</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown-item">
+                    <button class="dropdown-btn">TP 4 <span class="arrow">▼</span></button>
+                    <ul class="submenu">
+                        <li><a href="tp4ex2.html">Exercice 2</a></li>
+                        <li><a href="tp4ex3.html">Exercice 3</a></li>
+                        <li><a href="tp4_analyse.html">Analyse du TP</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown-item">
+                    <button class="dropdown-btn">TP 5 <span class="arrow">▼</span></button>
+                    <ul class="submenu">
+                        <li><a href="tp5ex1.html">Exercice 1</a></li>
+                        <li><a href="tp5ex6.html">Exercice 6 (Imposé)</a></li>
+                        <li><a href="tp5_analyse.html">Analyse du TP</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown-item">
+                    <button class="dropdown-btn">TP 6 <span class="arrow">▼</span></button>
+                    <ul class="submenu">
+                        <li><a href="tp6ex1.html">Exercice 1</a></li>
+                        <li><a href="tp6ex5.html">Exercice 5 (Imposé)</a></li>
+                        <li><a href="tp6_analyse.html">Analyse du TP</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown-item">
+                    <button class="dropdown-btn">TP 7 <span class="arrow">▼</span></button>
+                    <ul class="submenu">
+                        <li><a href="tp7ex1.html">Exercice 1</a></li>
+                        <li><a href="tp7ex3.html">Exercice 3</a></li>
+                        <li><a href="tp7_analyse.html">Analyse du TP</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown-item">
+                    <button class="dropdown-btn">TP 8 <span class="arrow">▼</span></button>
+                    <ul class="submenu">
+                        <li><a href="tp8ex1.html">Exercice 1</a></li>
+                        <li><a href="tp8ex2.html">Exercice 2</a></li>
+                        <li><a href="tp8_analyse.html">Analyse du TP</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="overlay" id="overlay"></div>
+    </nav>
+  <canvas id="c" width="300" height="300"></canvas>
+
+  <div class="buttons">
+    <button id="btnLargeur">Largeur</button>
+    <button id="btnHauteur">Hauteur</button>
+    <button id="btnCouleur">Couleur</button>
+    <button id="btnStyle">Style</button>
+    <button id="btnVisibilite">Visibilité</button>
+  </div>
+
+  <script src="js/tp7ex3.js"></script>
+     <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const closeBtn = document.getElementById('closeBtn');
+        const sideMenu = document.getElementById('sideMenu');
+        const overlay = document.getElementById('overlay');
+
+        function toggleMenu() {
+            sideMenu.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+
+        hamburgerBtn.addEventListener('click', toggleMenu);
+        closeBtn.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+
+        const dropdownBtns = document.querySelectorAll('.dropdown-btn');
+        dropdownBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.classList.toggle('open');
+                const submenu = this.nextElementSibling;
+                if (submenu.style.maxHeight) {
+                    submenu.style.maxHeight = null;
+                } else {
+                    submenu.style.maxHeight = submenu.scrollHeight + "px";
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>
